@@ -44,23 +44,6 @@ A beautifully designed, responsive **expense tracking app** built with **Flutter
 
 ---
 
-## 📂 Folder Structure
-
-lib/
-├── main.dart # App entry point
-├── models/
-│ └── expense.dart # Expense model & category logic
-├── widgets/
-│ ├── chart/
-│ │ ├── chart.dart # Chart widget
-│ │ └── chart_bar.dart # Chart bar component
-│ ├── expense_item.dart # Single expense card
-│ ├── expenses_list.dart # Scrollable list of expenses
-│ └── new_expense.dart # Modal for adding expenses
-└── expenses.dart # Main home screen
-
----
-
 ## ⚙️ Getting Started
 
 To run the app locally:
@@ -81,7 +64,7 @@ flutter pub get
 ```bash
 flutter run
 ```
-
+---
 ## 🚀 App Overview
 
 Modal Sheet: Add new expenses using a scrollable, responsive modal
@@ -92,18 +75,7 @@ Responsive Layout: Switches between column (mobile) and row (tablet)
 
 Dynamic Chart Bars: Based on max category-wise spending
 
-## 📸 Screenshot
-
-
-screenshots/
-├── home_light.png
-├── home_dark.png
-├── form_light.png
-├── form_dark.png
-├── chart_light.png
-├── chart_dark.png
-├── demo.gif
-
+---
 ## 🧠 What I Learned
 Building reusable widgets and clean architecture in Flutter
 
@@ -112,7 +84,7 @@ Using MediaQuery & LayoutBuilder for responsive design
 Handling user input and validation
 
 Theme customization for light and dark modes
-
+---
 🔮 Future Improvements
  Add local storage with shared_preferences or hive
 
@@ -121,7 +93,7 @@ Theme customization for light and dark modes
  Export expenses to CSV
 
  Add app settings page
-
+---
 ## 👤 Author
 Made with ❤️ by Danish Nadeem
 📧 danishnadeem16@gmail.com
