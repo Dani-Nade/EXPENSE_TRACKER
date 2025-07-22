@@ -17,7 +17,6 @@ A beautifully designed, responsive **expense tracking app** built with **Flutter
 
 ## 🎥 Demo
 
-> Replace this GIF with a real screen recording of your app  
 > ![Demo](expense_tracker/screenshots/Animation.gif)
 
 ---
@@ -71,14 +70,20 @@ To run the app locally:
 ```bash
 git clone https://github.com/yourusername/flutter_expense_tracker.git
 cd flutter_expense_tracker
+```
+### 2. Install Dependencies
 
-2. Install Dependencies
+```bash
 flutter pub get
+```
 
-3. Run the App
+### 3. Run the App
+```bash
 flutter run
+```
 
-🚀 App Overview
+## 🚀 App Overview
+
 Modal Sheet: Add new expenses using a scrollable, responsive modal
 
 SnackBar with Undo: Safely delete and restore expenses
@@ -87,8 +92,8 @@ Responsive Layout: Switches between column (mobile) and row (tablet)
 
 Dynamic Chart Bars: Based on max category-wise spending
 
-📸 Screenshot Placement
-Place your screenshots inside a screenshots/ folder in the root directory:
+## 📸 Screenshot
+
 
 screenshots/
 ├── home_light.png
@@ -99,7 +104,7 @@ screenshots/
 ├── chart_dark.png
 ├── demo.gif
 
-🧠 What I Learned
+## 🧠 What I Learned
 Building reusable widgets and clean architecture in Flutter
 
 Using MediaQuery & LayoutBuilder for responsive design
@@ -117,7 +122,7 @@ Theme customization for light and dark modes
 
  Add app settings page
 
-👤 Author
+## 👤 Author
 Made with ❤️ by Danish Nadeem
 📧 danishnadeem16@gmail.com
 🔗 LinkedIn • GitHub
