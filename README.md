@@ -18,7 +18,7 @@ A beautifully designed, responsive **expense tracking app** built with **Flutter
 ## 🎥 Demo
 
 > Replace this GIF with a real screen recording of your app  
-> ![Demo](screenshots/Animation.gif)
+> ![Demo](expense_tracker/screenshots/Animation.gif)
 
 ---
 
@@ -26,11 +26,11 @@ A beautifully designed, responsive **expense tracking app** built with **Flutter
 
 | Home (Light) | Home (Dark) |
 |--------------|-------------|
-| ![Home Light](screenshots/ET_Lightmode.png) | ![Home Dark](screenshots/ET_Darkmode.png) |
+| ![Home Light](expense_tracker/screenshots/ET_Lightmode.png) | ![Home Dark](expense_tracker/screenshots/ET_Darkmode.png) |
 
 | New Expense Form | Chart |
 |------------------|-------|
-| ![Form](screenshots/Form.png) | ![Chart](screenshots/Chart.png) |
+| ![Form](expense_tracker/screenshots/Form.png) | ![Chart](expense_tracker/screenshots/Chart.png) |
 
 > 💡 You can add dark mode versions too, like `form_dark.png` and `chart_dark.png`
 
