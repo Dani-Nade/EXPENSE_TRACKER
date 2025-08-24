@@ -1,63 +1,104 @@
-import 'package:flutter/material.dart';
 import 'package:expense_tracker/expenses.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 var kColorScheme = ColorScheme.fromSeed(
-  seedColor: Color.fromARGB(255, 96, 59, 181),
+  seedColor: const Color(0xFF6750A4),
+  brightness: Brightness.light,
 );
 
 var kDarkColorScheme = ColorScheme.fromSeed(
+  seedColor: const Color(0xFF6750A4),
   brightness: Brightness.dark,
-  seedColor: const Color.fromARGB(255, 5, 99, 125),
 );
 
 void main() {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((
-  //   fn,
-  // ) {
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.dark,
+    ),
+  );
+
   runApp(
     MaterialApp(
-      darkTheme: ThemeData.dark().copyWith(
+      debugShowCheckedModeBanner: false,
+      title: 'Expense Tracker',
+      darkTheme: ThemeData.dark(useMaterial3: true).copyWith(
         colorScheme: kDarkColorScheme,
         cardTheme: CardThemeData().copyWith(
-          color: kDarkColorScheme.secondaryContainer,
-          margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+          color: kDarkColorScheme.surfaceVariant,
+          elevation: 2,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: kDarkColorScheme.primaryContainer,
-            foregroundColor: kDarkColorScheme.onPrimaryContainer,
+            backgroundColor: kDarkColorScheme.primary,
+            foregroundColor: kDarkColorScheme.onPrimary,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            elevation: 2,
+          ),
+        ),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: kDarkColorScheme.primary,
+          foregroundColor: kDarkColorScheme.onPrimary,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
           ),
         ),
       ),
-
-      theme: ThemeData().copyWith(
+      theme: ThemeData.light(useMaterial3: true).copyWith(
         colorScheme: kColorScheme,
-        appBarTheme: AppBarTheme().copyWith(
-          backgroundColor: kColorScheme.onPrimaryContainer,
-          foregroundColor: kColorScheme.primaryContainer,
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.transparent,
+          foregroundColor: kColorScheme.onBackground,
+          elevation: 0,
+          systemOverlayStyle: SystemUiOverlayStyle.dark,
         ),
         cardTheme: CardThemeData().copyWith(
-          color: kColorScheme.secondaryContainer,
-          margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+          color: kColorScheme.surface,
+          elevation: 1,
+          shadowColor: kColorScheme.shadow.withOpacity(0.1),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: kColorScheme.primaryContainer,
+            backgroundColor: kColorScheme.primary,
+            foregroundColor: kColorScheme.onPrimary,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            elevation: 2,
           ),
         ),
-
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: kColorScheme.primary,
+          foregroundColor: kColorScheme.onPrimary,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+        ),
         textTheme: ThemeData().textTheme.copyWith(
           titleLarge: TextStyle(
             fontWeight: FontWeight.bold,
-            color: kColorScheme.onSecondaryContainer,
-            fontSize: 16,
+            color: kColorScheme.onBackground,
+            fontSize: 22,
+          ),
+          titleMedium: TextStyle(
+            fontWeight: FontWeight.w600,
+            color: kColorScheme.onSurface,
+            fontSize: 18,
           ),
         ),
       ),
       themeMode: ThemeMode.system,
-      home: Expenses(),
+      home: const Expenses(),
     ),
   );
-  // });
 }

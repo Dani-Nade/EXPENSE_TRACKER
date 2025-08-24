@@ -1,3 +1,4 @@
+// models/expense.dart
 import 'package:uuid/uuid.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -8,10 +9,17 @@ const uuid = Uuid();
 enum category { food, travel, leisure, work }
 
 const categoryIcon = {
-  category.food: Icons.lunch_dining,
-  category.travel: Icons.flight_takeoff,
-  category.leisure: Icons.movie,
-  category.work: Icons.work,
+  category.food: Icons.restaurant_rounded,
+  category.travel: Icons.flight_takeoff_rounded,
+  category.leisure: Icons.movie_rounded,
+  category.work: Icons.work_rounded,
+};
+
+const categoryColors = {
+  category.food: Color(0xFFFF6B6B),
+  category.travel: Color(0xFF4ECDC4),
+  category.leisure: Color(0xFFFFE66D),
+  category.work: Color(0xFF95E1D3),
 };
 
 class Expense {
@@ -43,7 +51,6 @@ class ExpenseBucket {
 
   double get totalExpenses {
     double sum = 0;
-
     for (final expense in expenses) {
       sum += expense.amount;
     }
